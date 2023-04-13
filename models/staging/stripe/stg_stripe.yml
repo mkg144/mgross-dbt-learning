@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: payments made for each order
+    columns: 
+      - name: payment_id
+        description: primary key for stg_payments
+        tests:
+          - unique
+          - not_null
+      - name: paymentmethod
+        description: '{{ doc("payment_methods")}}'
